@@ -1,6 +1,6 @@
 [project]
 name = "readme-rel"
-version = "0.1.0"
+version = "1.0.0"
 description = "Bump recent releases in my personal README"
 authors = [
     {name = "sco1", email = "sco1.git@gmail.com"}

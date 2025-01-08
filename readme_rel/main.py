@@ -174,6 +174,7 @@ def n_recent_releases(n: int = 5) -> list[Repository]:
 
 
 def render_repos(repos: abc.Iterable[Repository]) -> str:
+    """Format the provided repos into a bulleted list of their component information."""
     repo_strings = []
     for r in repos:
         repo_url = f"[`{r.name}`]({r.url})"
