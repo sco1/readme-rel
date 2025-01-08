@@ -1,6 +1,7 @@
 # readme-rel
-[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-black)](https://github.com/psf/black)
+[![Python Version from PEP 621 TOML](https://img.shields.io/python/required-version-toml?tomlFilePath=https%3A%2F%2Fraw.githubusercontent.com%2Fsco1%2Freadme-rel%2Frefs%2Fheads%2Fmain%2Fpyproject.toml&logo=python&logoColor=FFD43B)](https://github.com/sco1/readme-rel/blob/main/pyproject.toml)
+[![GitHub License](https://img.shields.io/github/license/sco1/readme-rel?color=magenta)](https://github.com/sco1/readme-rel/blob/main/LICENSE)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/sco1/readme-rel/main.svg)](https://results.pre-commit.ci/latest/github/sco1/readme-rel/main)
 
 Bump recent releases in my [personal README](https://github.com/sco1/sco1/blob/master/README.md)
 

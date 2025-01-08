@@ -3,6 +3,7 @@ from __future__ import annotations
 import datetime as dt
 import operator
 import os
+from collections import abc
 from dataclasses import dataclass
 
 from gql import Client, gql
@@ -172,5 +173,16 @@ def n_recent_releases(n: int = 5) -> list[Repository]:
     return repositories[:n]
 
 
-if __name__ == "__main__":
-    n_recent_releases()
+def render_repos(repos: abc.Iterable[Repository]) -> str:
+    repo_strings = []
+    for r in repos:
+        repo_url = f"[`{r.name}`]({r.url})"
+        tree_url = f"[Tree]({r.url}/tree/{r.last_release.tag_name})"
+        changelog_url = f"[Changelog]({r.last_release.url})"
+        publish_str = r.last_release.published.strftime(r"%Y-%m-%d")
+
+        # fmt: off
+        repo_strings.append(f"* {publish_str}: {repo_url} `{r.last_release.tag_name}` ({changelog_url}, {tree_url})  ")  # noqa: E501
+        # fmt: on
+
+    return "\n".join(repo_strings)

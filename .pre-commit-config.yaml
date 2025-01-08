@@ -28,6 +28,7 @@ repos:
       - id: end-of-file-fixer
       - id: mixed-line-ending
       - id: trailing-whitespace
+        exclude: "test_render.py"
   - repo: https://github.com/pre-commit/pygrep-hooks
     rev: v1.10.0
     hooks:
