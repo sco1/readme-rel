@@ -1,0 +1,73 @@
+{
+    "search": {
+        "pageInfo": {
+            "hasNextPage": true,
+            "endCursor": "Y3Vyc29yOjU="
+        },
+        "nodes": [
+            {
+                "name": "xbmini-py",
+                "url": "https://github.com/sco1/xbmini-py",
+                "isArchived": false,
+                "releases": {
+                    "totalCount": 5,
+                    "nodes": [
+                        {
+                            "tagName": "v0.5.0",
+                            "publishedAt": "2025-01-06T20:44:16Z",
+                            "url": "https://github.com/sco1/xbmini-py/releases/tag/v0.5.0"
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "py-template",
+                "url": "https://github.com/sco1/py-template",
+                "isArchived": false,
+                "releases": {
+                    "totalCount": 0,
+                    "nodes": []
+                }
+            },
+            {
+                "name": "flake8-annotations",
+                "url": "https://github.com/sco1/flake8-annotations",
+                "isArchived": false,
+                "releases": {
+                    "totalCount": 25,
+                    "nodes": [
+                        {
+                            "tagName": "v3.1.1",
+                            "publishedAt": "2024-05-17T14:07:20Z",
+                            "url": "https://github.com/sco1/flake8-annotations/releases/tag/v3.1.1"
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "pyflysight",
+                "url": "https://github.com/sco1/pyflysight",
+                "isArchived": false,
+                "releases": {
+                    "totalCount": 9,
+                    "nodes": [
+                        {
+                            "tagName": "v0.9.0",
+                            "publishedAt": "2024-11-27T17:52:24Z",
+                            "url": "https://github.com/sco1/pyflysight/releases/tag/v0.9.0"
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "misc",
+                "url": "https://github.com/sco1/misc",
+                "isArchived": false,
+                "releases": {
+                    "totalCount": 0,
+                    "nodes": []
+                }
+            }
+        ]
+    }
+}

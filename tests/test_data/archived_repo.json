@@ -1,0 +1,25 @@
+{
+    "search": {
+        "pageInfo": {
+            "hasNextPage": false,
+            "endCursor": "Y3Vyc29yOjEw"
+        },
+        "nodes": [
+            {
+                "name": "vid2pdf",
+                "url": "https://github.com/sco1/vid2pdf",
+                "isArchived": true,
+                "releases": {
+                    "totalCount": 2,
+                    "nodes": [
+                        {
+                            "tagName": "v1.1.0",
+                            "publishedAt": "2019-03-25T18:02:09Z",
+                            "url": "https://github.com/sco1/vid2pdf/releases/tag/v1.1.0"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

@@ -11,9 +11,6 @@ from graphql import DocumentNode
 from httpx import Timeout
 
 TOK = os.environ.get("PUBLIC_PAT", "")
-if not TOK:
-    raise RuntimeError("A PAT could not be found in the environment, please set 'PUBLIC_PAT'")
-
 
 # This search query should yield all of my public repositories, sorted by last updated
 # For each repository, provide:
@@ -59,7 +56,7 @@ query {
 }
 """
 
-TIMEOUT = Timeout(5, read=10)
+TIMEOUT = Timeout(5, read=15)  # Extend the read timeout a bit, keep the rest at default
 TRANSPORT = HTTPXTransport(
     url="https://api.github.com/graphql",
     headers={"Authorization": f"bearer {TOK}"},
@@ -136,12 +133,20 @@ def _paginate_query(after: str | None = None) -> DocumentNode:
     return gql(query)
 
 
-def n_recent_releases(n: int = 5) -> list[Release]:
+def n_recent_releases(n: int = 5) -> list[Repository]:
     """
     Query the GitHub GraphQL API for my `n` most recent repositories with a published release.
 
     For the purposes of this tool, only public, non-archived repositories are considered.
+
+    NOTE: Use of this function requires that a GitHub Personal Access Token be set to the
+    `"PUBLIC_PAT"` environment variable in order to authenticate with GitHub's GraphQL API. This
+    token only needs the base public repository access, no account or other repository access is
+    necessary.
     """
+    if not TOK:
+        raise RuntimeError("A PAT could not be found in the environment, please set 'PUBLIC_PAT'")
+
     repositories = []
 
     has_page = True

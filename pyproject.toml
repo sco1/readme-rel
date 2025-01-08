@@ -16,11 +16,12 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
     "Typing :: Typed",
 ]
 
-requires-python = ">=3.13"
+requires-python = ">=3.12"
 dependencies = [
     "cogapp~=3.4",
     "gql[httpx]~=3.5",
@@ -39,8 +40,14 @@ dev-dependencies = [
     "isort~=5.13",
     "mypy~=1.11",
     "pre-commit~=4.0",
+    "pytest~=8.3",
+    "pytest-cov~=6.0",
+    "pytest-mock~=3.14",
+    "pytest-randomly~=3.15",
     "ruff~=0.6",
     "sco1-bumper~=1.0",
+    "tox~=4.18",
+    "tox-uv~=1.11",
 ]
 
 [tool.black]
@@ -48,7 +55,7 @@ line-length = 100
 
 [tool.isort]
 case_sensitive = true
-known_first_party = "readme-rel"
+known_first_party = "readme-rel, tests"
 no_lines_before = "LOCALFOLDER"
 order_by_type = false
 profile = "black"
