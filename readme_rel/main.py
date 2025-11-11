@@ -6,9 +6,8 @@ import os
 from collections import abc
 from dataclasses import dataclass
 
-from gql import Client, gql
+from gql import Client, GraphQLRequest, gql
 from gql.transport.httpx import HTTPXTransport
-from graphql import DocumentNode
 from httpx import Timeout
 
 TOK = os.environ.get("PUBLIC_PAT", "")
@@ -114,7 +113,7 @@ class Repository:  # noqa: D101
         )
 
 
-def _paginate_query(after: str | None = None) -> DocumentNode:
+def _paginate_query(after: str | None = None) -> GraphQLRequest:
     """
     Update `BASE_QUERY` with the provided pagination cursor.
 

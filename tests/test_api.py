@@ -80,7 +80,7 @@ QUERY_TEST_CASES = (
 
 @pytest.mark.parametrize(("after", "truth_query"), QUERY_TEST_CASES)
 def test_paginate_query(after: str | None, truth_query: str) -> None:
-    assert _paginate_query(after) == gql(truth_query)
+    assert _paginate_query(after).payload == gql(truth_query).payload
 
 
 def test_n_recent_release_no_token_raises(mocker: MockerFixture) -> None:
