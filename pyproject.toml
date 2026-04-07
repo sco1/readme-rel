@@ -32,11 +32,11 @@ Repository = "https://github.com/sco1/readme-rel.git"
 
 [dependency-groups]
 dev = [
-    "black~=25.0",
+    "black~=26.3",
     "flake8~=7.1",
     "flake8-annotations~=3.1",
     "flake8-define-class-attributes~=0.2",
-    "isort~=7.0",
+    "isort~=8.0",
     "mypy~=1.11",
     "pre-commit~=4.0",
     "pytest~=9.0",
